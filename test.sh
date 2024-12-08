@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-for f in *.torrent; do
+shopt -s nullglob
+for f in {good,bad}/*.torrent *.torrent; do
   echo "$f"
   for p in 1 2 hybrid; do
     echo $p
